@@ -23,7 +23,7 @@ export async function ProbarConexion(){
     }
 }
 
-export async function CerrarPool{
+export async function CerrarPool(){
     await pool.end();
 }
 
