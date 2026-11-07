@@ -1,6 +1,6 @@
-import {ProbarConexion,CerrarPool} from './src/config/db.js';
+import {probarConexion,cerraConexion} from './src/config/db.js';
 try{
-    const info = await ProbarConexion();
+    const info = await probarConexion();
     console.log('Conexion MYSQL exitosa');
     console.table(info);
 }catch(err){
@@ -11,5 +11,5 @@ try{
 }
 
 finally{
-    CerrarPool();
+    cerraConexion();
 }

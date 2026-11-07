@@ -1,5 +1,5 @@
 //import mysql from 'mysql2/promise';
-import {Sequenlize, QueryTypes} from 'sequelize';
+import {Sequelize, QueryTypes} from 'sequelize';
 import {env} from './env.js';
 
 // export const pool = mysql.createPool({
@@ -53,4 +53,4 @@ export async function probarConexion(){
 
 }
 
-export const cerrarConexion = () => sequelize.close();
+export const cerraConexion = () => sequelize.close();

@@ -1,0 +1,1 @@
+export const plano = (fila) => (fila ? fila.get({plain: true}) : null);
