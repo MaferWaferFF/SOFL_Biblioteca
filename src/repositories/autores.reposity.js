@@ -5,11 +5,11 @@ import {plano} from '../utils/plano.js';
 export async function listar({q}={}){
     const where = q ? {//condicion para filtrar por nombre o apellido
         [Op.or]:[
-            {nombre: {[Op.like]: `%${q}$`}},
-            {apellido: {[Op.like]: `%${q}$`}},
+            {nombre: {[Op.like]: `%${q}%`}},
+            {apellido: {[Op.like]: `%${q}%`}},
         ]
     }: {};
-    return (await Autor.findAll({where, order:['apellido', 'ASC']})).map(plano)
+    return (await Autor.findAll({where, order:['apellido', 'ASC']})).map(plano);
 }
 
 export async function listarXId(id){
