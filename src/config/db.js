@@ -34,13 +34,13 @@ export const sequelize = new Sequelize(
     env.db.password,
     {
         host:env.db.host,
-        port:env.db.pool,
+        port:env.db.port,
         dialect:'mysql',
         logging: env.db.logging? (sql) => console.log(`[SQL] ${sql}`):false,
         pool:{max:env.db.connectionLimit, min:0, acquiere:30000, idle: 10000},
         define:{
             freezeTableName: true,
-            timesramps: false,
+            timestamps: false,
         },
         dialectOptions:{decimalNumbers: true}
     }
