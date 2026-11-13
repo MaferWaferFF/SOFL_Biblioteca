@@ -14,7 +14,7 @@ export async function crear(req, res) {
 }
 
 export async function actualizar(req, res) {
-    res.json(await service.actualizar(req.params.id, req.body));
+    res.json(await service.actualizar(Number(req.params.id), req.body));
 }
 
 export async function eliminar(req, res) {

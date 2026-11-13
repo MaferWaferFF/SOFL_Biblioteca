@@ -1,0 +1,14 @@
+@api = http://localhost:3000/api
+
+GET {{api}}/autores ###listar ordenado 
+GET {{api}}/autores?q=mart ###buscar por nombre y apellido
+GET {{api}}/autores/1
+
+@name nuevoAutor 
+POST {{api}}/autores
+Content-Type::application/json
+{
+    "nombres": "Kent",
+    "apellidos": "Romero",
+    "nacionalidad": "Peruano"
+}

@@ -1,7 +1,8 @@
 import { Router } from "express";
-
 import * as controller from '../controllers/autore.controller.js';
+import {validarId} from '../middlewares/validar-id.middleware.js';
 const router = Router();
+
 router.get('/', controller.listar);
 router.get('/:id', controller.obtener);
 router.post('/', controller.crear);
